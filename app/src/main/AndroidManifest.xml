@@ -24,6 +24,8 @@
         <activity android:name=".RegisterActivity" android:exported="false" />
         <activity android:name=".DashboardActivity" android:exported="false" />
         <activity android:name=".FamilySetupActivity" android:exported="false" />
+        <activity android:name=".PlantListActivity" android:exported="false" />
+        <activity android:name=".AddEditPlantActivity" android:exported="false" />
     </application>
 
 </manifest>

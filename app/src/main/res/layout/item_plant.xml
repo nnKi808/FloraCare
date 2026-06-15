@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Eine einzelne Listenzeile (eine Pflanze).
+    Wird vom PlantAdapter für jede Pflanze aufgeblasen ("inflated") und befüllt.
+    selectableItemBackground sorgt für den Tipp-Effekt (Ripple).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="16dp">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/flora_text_dunkel"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:text="Pflanzenname" />
+
+    <TextView
+        android:id="@+id/item_species"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="#7A7A7A"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/item_care"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/flora_gruen"
+        android:textSize="13sp" />
+
+</LinearLayout>

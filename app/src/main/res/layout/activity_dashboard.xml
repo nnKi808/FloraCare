@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Dashboard Layout - Stand Etappe 3.
+    Neu gegenüber Etappe 2: Button "Meine Pflanzen" (führt zur Pflanzenliste).
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -43,21 +47,25 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <TextView
+    <Button
+        android:id="@+id/button_meine_pflanzen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/dashboard_platzhalter"
-        android:textColor="@color/flora_text_dunkel"
-        android:textSize="13sp" />
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/flora_gruen"
+        android:minHeight="52dp"
+        android:paddingHorizontal="24dp"
+        android:text="@string/button_meine_pflanzen"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/flora_gruen"
-        android:minHeight="48dp"
-        android:text="@string/button_logout" />
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/flora_gruen_hell"
+        android:minHeight="44dp"
+        android:text="@string/button_logout"
+        android:textColor="@color/flora_text_dunkel" />
 
 </LinearLayout>

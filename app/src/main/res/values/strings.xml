@@ -75,4 +75,40 @@
     <string name="dashboard_familie">Familie: %1$s</string>
     <string name="dashboard_code">Einladungscode: %1$s</string>
 
+    <!-- Pflanzenliste -->
+    <string name="plant_list_titel">Meine Pflanzen</string>
+    <string name="plant_list_leer">Noch keine Pflanzen.\nFüge mit dem Button unten die erste hinzu! 🌱</string>
+    <string name="button_pflanze_hinzufuegen">+ Pflanze hinzufügen</string>
+    <string name="item_care_info">%1$s · alle %2$d Tage gießen</string>
+    <string name="button_meine_pflanzen">Meine Pflanzen</string>
+
+    <!-- Pflanze anlegen / bearbeiten -->
+    <string name="add_plant_titel">Pflanze hinzufügen</string>
+    <string name="edit_plant_titel">Pflanze bearbeiten</string>
+    <string name="hint_plant_name">Name (z. B. Mamas Monstera)</string>
+    <string name="hint_plant_species">Art (z. B. Monstera deliciosa) — optional</string>
+    <string name="hint_plant_owner">Besitzer (z. B. Mama, Papa, ich)</string>
+    <string name="hint_plant_water">Gießen: alle wie viele Tage?</string>
+    <string name="hint_plant_fertilize">Düngen: alle wie viele Tage?</string>
+    <string name="button_speichern">Speichern</string>
+    <string name="button_pflanze_loeschen">Pflanze löschen</string>
+
+    <!-- Pflanze: Validierung, Erfolg, Fehler -->
+    <string name="fehler_plant_name_leer">Bitte einen Namen eingeben</string>
+    <string name="fehler_plant_owner_leer">Bitte einen Besitzer eingeben</string>
+    <string name="fehler_plant_water_leer">Bitte ein Gieß-Intervall eingeben</string>
+    <string name="fehler_plant_fertilize_leer">Bitte ein Dünge-Intervall eingeben</string>
+    <string name="fehler_plant_intervall_null">Das Intervall muss mindestens 1 Tag sein</string>
+    <string name="erfolg_plant_gespeichert">Pflanze gespeichert</string>
+    <string name="erfolg_plant_geloescht">Pflanze gelöscht</string>
+    <string name="fehler_plant_speichern">Speichern fehlgeschlagen:</string>
+    <string name="fehler_plant_laden">Pflanze konnte nicht geladen werden:</string>
+    <string name="fehler_plant_loeschen">Löschen fehlgeschlagen:</string>
+
+    <!-- Lösch-Dialog -->
+    <string name="dialog_delete_titel">Pflanze löschen?</string>
+    <string name="dialog_delete_text">Möchtest du \"%1$s\" wirklich löschen? Das lässt sich nicht rückgängig machen.</string>
+    <string name="dialog_delete_ja">Löschen</string>
+    <string name="dialog_delete_nein">Abbrechen</string>
+
 </resources>

@@ -1,6 +1,5 @@
 package de.hwr.floracare;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -15,26 +14,25 @@ import com.google.firebase.firestore.FirebaseFirestore;
 /**
  * Dashboard.
  *
- * Stand Etappe 2: Begrüßung + Anzeige der Familie (Name + Einladungscode).
- * Der Code wird hier dauerhaft sichtbar, damit Familienmitglieder ihn jederzeit
- * zum Teilen wiederfinden. In Etappe 5 wird hieraus die "Heute fällig"-Übersicht.
+ * Stand Etappe 3: Begrüßung + Familie (Name + Code) + Button "Meine Pflanzen",
+ * der zur Pflanzenliste führt. In Etappe 5 wird hieraus die "Heute fällig"-Übersicht.
  *
  * Prüfungs-Wissen: Hier passieren ZWEI VERKETTETE Firestore-Reads. Erst das
- * Nutzer-Dokument (liefert Name + familyId), und ERST WENN die familyId da ist,
- * das zugehörige Family-Dokument (liefert Familienname + Code). Der zweite Read
- * hängt vom Ergebnis des ersten ab -- deshalb steht er in dessen Callback.
+ * Nutzer-Dokument (Name + familyId), und ERST WENN die familyId vorliegt, das
+ * zugehörige Family-Dokument (Name + Code). Der zweite Read hängt vom Ergebnis
+ * des ersten ab und steht deshalb in dessen Callback.
  */
 public class DashboardActivity extends AppCompatActivity {
 
     private TextView textWillkommen;
     private TextView textFamilie;
     private TextView textCode;
+    private Button buttonMeinePflanzen;
     private Button buttonLogout;
 
     private FirebaseAuth auth;
     private FirebaseFirestore db;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,9 +44,13 @@ public class DashboardActivity extends AppCompatActivity {
         textWillkommen = findViewById(R.id.text_willkommen);
         textFamilie = findViewById(R.id.text_familie);
         textCode = findViewById(R.id.text_code);
+        buttonMeinePflanzen = findViewById(R.id.button_meine_pflanzen);
         buttonLogout = findViewById(R.id.button_logout);
 
         datenLaden();
+
+        buttonMeinePflanzen.setOnClickListener(v ->
+                startActivity(new Intent(this, PlantListActivity.class)));
 
         buttonLogout.setOnClickListener(v -> logout());
     }
@@ -86,7 +88,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     /**
      * Abmelden und zurück zum Login.
-     * NEW_TASK | CLEAR_TASK leeren den Activity-Stack -- nach dem Logout kommt man
+     * NEW_TASK | CLEAR_TASK leeren den Activity-Stack – nach dem Logout kommt man
      * mit der Zurück-Taste nicht wieder in die geschützte App.
      */
     private void logout() {

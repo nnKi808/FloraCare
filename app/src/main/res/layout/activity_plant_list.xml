@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Pflanzenliste.
+    Aufbau: Titel oben, darunter ein Bereich (FrameLayout) mit der Liste UND
+    einem zentrierten "leer"-Hinweis (es ist immer nur eins davon sichtbar),
+    unten der Button zum Hinzufügen.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flora_hintergrund"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/plant_list_titel"
+        android:textColor="@color/flora_gruen"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_plants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:id="@+id/text_leer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/plant_list_leer"
+            android:textColor="@color/flora_text_dunkel"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_pflanze_hinzufuegen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/flora_gruen"
+        android:minHeight="52dp"
+        android:text="@string/button_pflanze_hinzufuegen"
+        android:textSize="16sp" />
+
+</LinearLayout>
