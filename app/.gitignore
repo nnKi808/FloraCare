@@ -1,0 +1,8 @@
+/build
+/.gradle
+/.idea
+/local.properties
+*.iml
+
+# Firebase-Konfigurationsdatei NICHT einchecken
+app/google-services.json

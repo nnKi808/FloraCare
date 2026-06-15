@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Alle sichtbaren Texte der App als Ressourcen.
+    Best Practice: Texte gehören NICHT hartcodiert ins Layout oder in
+    Java-Code — so bleiben sie zentral pflegbar und übersetzbar.
+    Prüfungs-Frage-tauglich: "Warum stehen Ihre Texte in strings.xml?"
+-->
+<resources>
+    <string name="app_name">FloraCare</string>
+    <string name="app_titel_logo">FloraCare 🌱</string>
+
+    <!-- Login -->
+    <string name="login_untertitel">Gemeinsam Pflanzen pflegen</string>
+    <string name="hint_email">E-Mail-Adresse</string>
+    <string name="hint_passwort">Passwort</string>
+    <string name="button_anmelden">Anmelden</string>
+    <string name="link_zur_registrierung">Noch kein Konto? Hier registrieren</string>
+
+    <!-- Registrierung -->
+    <string name="register_titel">Konto erstellen</string>
+    <string name="register_untertitel">Werde Teil deiner Pflanzen-Familie</string>
+    <string name="hint_name">Anzeigename (z. B. Papa, Mama, Nikita)</string>
+    <string name="hint_passwort_mind">Passwort (mind. 6 Zeichen)</string>
+    <string name="hint_passwort_wdh">Passwort wiederholen</string>
+    <string name="button_konto_erstellen">Konto erstellen</string>
+    <string name="link_zum_login">Schon registriert? Hier anmelden</string>
+
+    <!-- Dashboard (Etappe-1-Platzhalter) -->
+    <string name="willkommen_laedt">Willkommen…</string>
+    <string name="willkommen">Willkommen, %1$s!</string>
+    <string name="dashboard_platzhalter">Dein Dashboard entsteht in Etappe 5.</string>
+    <string name="button_logout">Abmelden</string>
+
+    <!-- Fehlermeldungen -->
+    <string name="fehler_name_leer">Bitte einen Namen eingeben</string>
+    <string name="fehler_email_leer">Bitte E-Mail eingeben</string>
+    <string name="fehler_passwort_leer">Bitte Passwort eingeben</string>
+    <string name="fehler_passwort_kurz">Mindestens 6 Zeichen</string>
+    <string name="fehler_passwort_ungleich">Passwörter stimmen nicht überein</string>
+    <string name="fehler_login">Login fehlgeschlagen:</string>
+    <string name="fehler_registrierung">Registrierung fehlgeschlagen:</string>
+    <string name="fehler_profil">Profil konnte nicht angelegt werden:</string>
+    <string name="fehler_laden">Daten konnten nicht geladen werden:</string>
+    <string name="fehler_unbekannt">Unbekannter Fehler</string>
+
+    <!-- Erfolgsmeldungen -->
+    <string name="erfolg_registrierung">Konto erstellt — willkommen!</string>
+
+    <!-- Family-Setup -->
+    <string name="family_setup_titel">Familie einrichten</string>
+    <string name="family_setup_untertitel">Erstelle eine neue Familie oder tritt einer bestehenden bei.</string>
+    <string name="family_create_header">Neue Familie erstellen</string>
+    <string name="hint_familienname">Familienname (z. B. Familie Pasichnyk)</string>
+    <string name="button_familie_erstellen">Familie erstellen</string>
+    <string name="family_oder">— oder —</string>
+    <string name="family_join_header">Bestehender Familie beitreten</string>
+    <string name="hint_einladungscode">Einladungscode (6 Zeichen)</string>
+    <string name="button_familie_beitreten">Familie beitreten</string>
+
+    <!-- Family-Setup: Fehler & Erfolg -->
+    <string name="fehler_familienname_leer">Bitte einen Familiennamen eingeben</string>
+    <string name="fehler_code_leer">Bitte einen Einladungscode eingeben</string>
+    <string name="fehler_code_ungueltig">Keine Familie mit diesem Code gefunden</string>
+    <string name="fehler_family_erstellen">Familie konnte nicht erstellt werden:</string>
+    <string name="fehler_family_beitreten">Beitritt fehlgeschlagen:</string>
+    <string name="erfolg_family_beigetreten">Familie beigetreten!</string>
+    <string name="fehler_route">Konnte nicht ermitteln, wie es weitergeht. Bitte erneut anmelden.</string>
+
+    <!-- Code-Dialog nach dem Erstellen -->
+    <string name="dialog_code_titel">Familie erstellt! 🎉</string>
+    <string name="dialog_code_text">Dein Einladungscode lautet:\n\n%1$s\n\nTeile ihn mit deiner Familie, damit alle beitreten können.</string>
+    <string name="dialog_code_ok">Los geht\'s</string>
+
+    <!-- Dashboard: Familie -->
+    <string name="dashboard_familie">Familie: %1$s</string>
+    <string name="dashboard_code">Einladungscode: %1$s</string>
+
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Family-Setup-Screen.
+    Zwei klar getrennte Bereiche: oben "Familie erstellen", unten "Familie beitreten",
+    getrennt durch ein "oder". ScrollView außen, damit bei eingeblendeter Tastatur
+    alles erreichbar bleibt.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flora_hintergrund"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/family_setup_titel"
+            android:textColor="@color/flora_gruen"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/family_setup_untertitel"
+            android:textColor="@color/flora_text_dunkel"
+            android:textSize="14sp" />
+
+        <!-- ===== Bereich A: Neue Familie erstellen ===== -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/family_create_header"
+            android:textColor="@color/flora_text_dunkel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/input_familienname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:autofillHints="name"
+            android:hint="@string/hint_familienname"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <!-- ===== Trenner ===== -->
+        <Button
+            android:id="@+id/button_familie_erstellen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/flora_gruen"
+            android:minHeight="52dp"
+            android:text="@string/button_familie_erstellen"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="28dp"
+            android:gravity="center"
+            android:text="@string/family_oder"
+            android:textColor="@color/flora_text_dunkel"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- ===== Bereich B: Bestehender Familie beitreten ===== -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/family_join_header"
+            android:textColor="@color/flora_text_dunkel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/input_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:autofillHints=""
+            android:hint="@string/hint_einladungscode"
+            android:inputType="textCapCharacters"
+            android:maxLength="6"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/button_familie_beitreten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/flora_gruen"
+            android:minHeight="52dp"
+            android:text="@string/button_familie_beitreten"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/lade_anzeige"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

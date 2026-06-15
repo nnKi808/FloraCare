@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    FloraCare-Farbpalette.
+    Diese Datei ERGÄNZT die vorhandene colors.xml deines Projekts:
+    Füge die vier flora_*-Zeilen in deine bestehende Datei ein
+    (die vorhandenen Einträge wie black/white NICHT löschen).
+-->
+<resources>
+    <color name="flora_gruen">#2E7D32</color>
+    <color name="flora_gruen_hell">#A5D6A7</color>
+    <color name="flora_hintergrund">#F1F8E9</color>
+    <color name="flora_text_dunkel">#1B3A1F</color>
+</resources>

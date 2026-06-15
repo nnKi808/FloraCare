@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Login-Screen Layout.
+    Vertikales LinearLayout: Elemente werden einfach untereinander gestapelt.
+    Bewusst simpel gehalten — leicht zu erklären, leicht zu warten.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flora_hintergrund"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_titel_logo"
+        android:textColor="@color/flora_gruen"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/login_untertitel"
+        android:textColor="@color/flora_text_dunkel"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="emailAddress"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/input_passwort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:autofillHints="password"
+        android:hint="@string/hint_passwort"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/flora_gruen"
+        android:minHeight="52dp"
+        android:text="@string/button_anmelden"
+        android:textSize="16sp" />
+
+    <!-- Lade-Spinner: standardmäßig unsichtbar, wird beim Login eingeblendet -->
+    <ProgressBar
+        android:id="@+id/lade_anzeige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/link_registrieren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:minHeight="48dp"
+        android:gravity="center"
+        android:text="@string/link_zur_registrierung"
+        android:textColor="@color/flora_gruen"
+        android:textStyle="bold" />
+
+</LinearLayout>
